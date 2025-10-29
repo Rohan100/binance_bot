@@ -1,6 +1,11 @@
 
 from typing import Optional, Dict, Any
 from utils import client
+import logging
+from logger import setup_logger
+
+setup_logger()  # Initialize once
+logger = logging.getLogger(__name__)
 
 def get_balance(asset: Optional[str] = None) -> Dict[str, Any]:
 
@@ -45,14 +50,17 @@ def get_current_price(symbol: str) -> float:
 	
 def place_buy_order(symbol: str, quantity: float) -> Dict[str, Any]:
 
-    try:
-        order = client.order_market_buy(
-            symbol=symbol,
-            quantity=quantity
-        )
-        return order
-    except Exception as e:
-        raise RuntimeError(f"Failed to place market order for {symbol}: {e}") from e
+	try:
+		order = client.order_market_buy(
+			symbol=symbol,
+			quantity=quantity
+		)
+		logger.info(f"Placing MARKET BUY order for {symbol}, qty={quantity}")
+
+		return order
+	except Exception as e:
+		logger.error(f"Error placing MARKET order: {e}")
+		raise RuntimeError(f"Failed to place market order for {symbol}: {e}") from e
 
 def place_sell_order(symbol: str, quantity: float) -> Dict[str, Any]:
 
