@@ -2,12 +2,12 @@
 This project is a simple Binance trading bot that allows users to place market and limit orders via command-line arguments. It leverages the Binance API for executing trades.
 ### Features
 - Place market buy and sell orders
-<img src="assets/1e.png" alt="CLI Example" width="600"/>
-<img src="assets/2.png" alt="CLI Example" width="600"/>
+<img src="assets/1.png" alt="CLI Example" width="800"/>
+<img src="assets/2.png" alt="CLI Example" width="800"/>
 
 - Place limit buy and sell orders
-  <img src="assets/3.png" alt="CLI Example" width="600"/>
-   <img src="assets/4.png" alt="CLI Example" width="600"/>
+  <img src="assets/3.png" alt="CLI Example" width="800"/>
+   <img src="assets/4.png" alt="CLI Example" width="800"/>
 ### Requirements
 - Python 3.7+
 - `binance` Python package
