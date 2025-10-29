@@ -12,17 +12,16 @@ This project is a simple Binance trading bot that allows users to place market a
    ```bash
    git clone
    cd binance-bot
-
-
+2. Activate virtual environment 
 # For Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
-
+```
 # For macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
 Install dependencies:
 
-bash ```
-pip install -r requirements.txt
-(If you don’t have a requirements.txt yet, create one with the following content)
+```bash
+   pip install -r requirements.txt
